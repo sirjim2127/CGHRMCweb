@@ -43,7 +43,7 @@ export default function LandingPage() {
         <div className="mt-8 flex items-start flex-col lg:flex-row ">
           <div className="flex-1 rounded-md justify-between items-start">
             <img
-              src="/assets/img/unit_training.png"
+              src="https://www.facebook.com/photo/?fbid=451353150888271&set=pcb.451353937554859"
               alt="Logo 3"
               className="w-full h-full object-contain rounded-md"
             />
@@ -118,7 +118,7 @@ export default function LandingPage() {
           </div>
           <div className="flex-1 rounded-md justify-between items-start">
             <img
-              src="/assets/img/sharing1.png"
+              src="https://www.facebook.com/photo/?fbid=449947551028831&set=pcb.449947654362154"
               alt="Logo 3"
               className="w-full h-full object-contain rounded-md"
             />
