@@ -8,7 +8,7 @@ import Layout from "./components/layout";
 function App() {
   return (
     <div className=" h-screen w-screen font-montserrat">
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Routes>
           <Route
             path="/"
