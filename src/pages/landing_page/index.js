@@ -118,8 +118,8 @@ export default function LandingPage() {
           </div>
           <div className="flex-1 rounded-md justify-between items-start">
             <img
-              src="https://www.facebook.com/photo/?fbid=449947551028831&set=pcb.449947654362154"
-              alt="Logo 3"
+              src={`${process.env.PUBLIC_URL}/assets/img/sharing1.png`}
+              alt="Sharing"
               className="w-full h-full object-contain rounded-md"
             />
           </div>

@@ -25,11 +25,10 @@ export default function Layout({ children }) {
           {MenuItems.map((item, index) => (
             <Link key={index} to={item.path}>
               <li
-                className={`${
-                  location.pathname === item.path
-                    ? "text-white bg-blue-500"
-                    : "hover:text-gray-100 hover:bg-blue-300"
-                } text-xl py-2 px-4 rounded-md text-gray-500 font-semibold mr-4 cursor-pointer mb-1`}>
+                className={`${location.pathname === item.path
+                  ? "text-white bg-blue-500"
+                  : "hover:text-gray-100 hover:bg-blue-300"
+                  } text-xl py-2 px-4 rounded-md text-gray-500 font-semibold mr-4 cursor-pointer mb-1`}>
                 {item.label}
               </li>
             </Link>
@@ -37,7 +36,7 @@ export default function Layout({ children }) {
         </ul>
       </RightSideDrawer>
       <div className="min-h-32 h-32 w-full bg-blue-500 flex p-4">
-        <img src="/assets/logo.png" alt="" className="max-h-full max-w-full" />
+        <img src={`${process.env.PUBLIC_URL}/assets/logo.png`} alt="" className="max-h-full max-w-full" />
         <div className="h-full flex-col justify-center px-4 hidden md:flex overflow-y-auto">
           <h1 className="text-xl font-bold text-white mb-1">
             Human Resource Management Command
