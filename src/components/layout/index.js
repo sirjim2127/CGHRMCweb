@@ -37,7 +37,7 @@ export default function Layout({ children }) {
       </RightSideDrawer>
       <div className="min-h-32 h-32 w-full bg-blue-500 flex p-4">
         <img src={`${process.env.PUBLIC_URL}/assets/logo.png`} alt="" className="max-h-full max-w-full" />
-        <div className="h-full flex-col justify-center px-4 flex overflow-y-auto">
+        <div className="h-full flex-col justify-center px-4 hidden sm:flex overflow-y-auto">
           <h1 className="text-xs font-bold text-white mb-1">
             Human Resource Management Command
           </h1>
