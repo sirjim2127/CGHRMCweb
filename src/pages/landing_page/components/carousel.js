@@ -16,7 +16,7 @@ export default function LandingCarousel() {
         <div
           className="flex items-center rounded-md"
           style={{
-            backgroundImage: `url('https://jcbsit2k19.github.io/coastguardweb/assets/carousel_images/1.jpg')`,
+            backgroundImage: `/assets/carousel_images/1.jpg`,
             backgroundSize: "cover",
             backgroundPosition: "center",
             width: "100%",
@@ -26,7 +26,7 @@ export default function LandingCarousel() {
         <div
           className="flex items-center rounded-md"
           style={{
-            backgroundImage: `url('https://jcbsit2k19.github.io/coastguardweb/assets/carousel_images/2.jpg')`,
+            backgroundImage: `/assets/carousel_images/2.jpg`,
             backgroundSize: "cover",
             backgroundPosition: "center",
             width: "100%",
@@ -36,7 +36,7 @@ export default function LandingCarousel() {
         <div
           className="flex items-center rounded-md"
           style={{
-            backgroundImage: `url('https://jcbsit2k19.github.io/coastguardweb/assets/carousel_images/3.jpg')`,
+            backgroundImage: `/assets/carousel_images/3.jpg`,
             backgroundSize: "cover",
             backgroundPosition: "center",
             width: "100%",
@@ -46,7 +46,7 @@ export default function LandingCarousel() {
         <div
           className="flex items-center rounded-md"
           style={{
-            backgroundImage: `url('https://jcbsit2k19.github.io/coastguardweb/assets/carousel_images/4.jpg')`,
+            backgroundImage: `/assets/carousel_images/4.jpg`,
             backgroundSize: "cover",
             backgroundPosition: "center",
             width: "100%",
@@ -56,7 +56,7 @@ export default function LandingCarousel() {
         <div
           className="flex items-center rounded-md"
           style={{
-            backgroundImage: `url('https://jcbsit2k19.github.io/coastguardweb/assets/carousel_images/5.jpg')`,
+            backgroundImage: `/assets/carousel_images/5.jpg`,
             backgroundSize: "cover",
             backgroundPosition: "center",
             width: "100%",
