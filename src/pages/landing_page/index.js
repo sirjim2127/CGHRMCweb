@@ -43,8 +43,8 @@ export default function LandingPage() {
         <div className="mt-8 flex items-start flex-col lg:flex-row ">
           <div className="flex-1 rounded-md justify-between items-start">
             <img
-              src="https://www.facebook.com/photo/?fbid=451353150888271&set=pcb.451353937554859"
-              alt="Logo 3"
+              src={`${process.env.PUBLIC_URL}/assets/img/unit_training.png`}
+              alt="TrainingImage"
               className="w-full h-full object-contain rounded-md"
             />
           </div>
