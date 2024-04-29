@@ -17,8 +17,8 @@ export default function NewsPage() {
       </div>
 
       <SideDrawer isOpen={showNewsList} setShow={setShowNewsList}>
-        <div className="w-96 h-full max-h-full bg-white overflow-y-auto p-4">
-          <h1 className="text-2xl font-bold text-blue-500 mb-4">News List</h1>
+        <div className="w-72 h-full max-h-full bg-white overflow-y-auto p-4">
+          <h1 className="text-lg font-bold text-blue-500 mb-4">News List</h1>
           <ul>
             {newsData.map((item, index) => (
               <li
@@ -27,26 +27,23 @@ export default function NewsPage() {
                   setCurrentNews(item.newsFile);
                   setShowNewsList(false);
                 }}
-                className={`${
-                  currentNews === item.newsFile
-                    ? "bg-blue-500 text-gray-100"
-                    : "hover:bg-blue-100"
-                } p-2  cursor-pointer rounded-md mb-1`}>
+                className={`${currentNews === item.newsFile
+                  ? "bg-blue-500 text-gray-100"
+                  : "hover:bg-blue-100"
+                  } p-2  cursor-pointer rounded-md mb-1`}>
                 <h1
-                  className={`${
-                    currentNews === item.newsFile
-                      ? "text-gray-100"
-                      : "text-gray-400"
-                  }
-                  text-lg text-gray-700 font-semibold`}>
+                  className={`${currentNews === item.newsFile
+                    ? "text-gray-100"
+                    : "text-gray-400"
+                    }
+                  text-sm text-gray-700 font-semibold`}>
                   {item.title}
                 </h1>
                 <p
-                  className={`${
-                    currentNews === item.newsFile
-                      ? "text-gray-100"
-                      : "text-gray-400"
-                  } text-sm `}>
+                  className={`${currentNews === item.newsFile
+                    ? "text-gray-100"
+                    : "text-gray-400"
+                    } text-xs `}>
                   {item.date}
                 </p>
               </li>
@@ -55,8 +52,8 @@ export default function NewsPage() {
         </div>
       </SideDrawer>
       <div className=" flex h-full max-h-full bg-gray-100">
-        <div className="w-96 h-full max-h-full bg-white overflow-y-auto p-4 lg:block hidden">
-          <h1 className="text-2xl font-bold text-blue-500 mb-4">News List</h1>
+        <div className="w-72 h-full max-h-full bg-white overflow-y-auto p-4 lg:block hidden">
+          <h1 className="text-lg font-bold text-blue-500 mb-4">News List</h1>
           <ul>
             {newsData.map((item, index) => (
               <li
@@ -64,26 +61,23 @@ export default function NewsPage() {
                 onClick={() => {
                   setCurrentNews(item.newsFile);
                 }}
-                className={`${
-                  currentNews === item.newsFile
-                    ? "bg-blue-500 text-gray-100"
-                    : "hover:bg-blue-100"
-                } p-2  cursor-pointer rounded-md mb-1`}>
+                className={`${currentNews === item.newsFile
+                  ? "bg-blue-500 text-gray-100"
+                  : "hover:bg-blue-100"
+                  } p-2  cursor-pointer rounded-md mb-1`}>
                 <h1
-                  className={`${
-                    currentNews === item.newsFile
-                      ? "text-gray-100"
-                      : "text-gray-400"
-                  }
-                text-lg text-gray-700 font-semibold`}>
+                  className={`${currentNews === item.newsFile
+                    ? "text-gray-100"
+                    : "text-gray-400"
+                    }
+                text-sm text-gray-700 font-semibold`}>
                   {item.title}
                 </h1>
                 <p
-                  className={`${
-                    currentNews === item.newsFile
-                      ? "text-gray-100"
-                      : "text-gray-400"
-                  } text-sm `}>
+                  className={`${currentNews === item.newsFile
+                    ? "text-gray-100"
+                    : "text-gray-400"
+                    } text-xs `}>
                   {item.date}
                 </p>
               </li>

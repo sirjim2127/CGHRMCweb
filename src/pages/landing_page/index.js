@@ -10,11 +10,11 @@ import { AiFillInstagram } from "react-icons/ai";
 export default function LandingPage() {
   return (
     <div className="">
-      <div className="w-full max-h-full 2xl:flex-row flex flex-col p-4 bg-gray-100">
-        <div className="mx-auto">
+      <div className="w-full max-h-full lg:flex-row flex flex-col bg-gray-100 p-4">
+        <div className="flex-1 mx-1">
           <LandingCarousel />
         </div>
-        <div className="flex-1 w-full max-h-full p-4">
+        <div className="flex-1 mx-1">
           <Heading>
             The Coast Guard Human Resource Management Service (COHRMS)
           </Heading>
