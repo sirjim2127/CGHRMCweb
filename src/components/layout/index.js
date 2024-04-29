@@ -38,13 +38,13 @@ export default function Layout({ children }) {
       <div className="min-h-32 h-32 w-full bg-blue-500 flex p-4">
         <img src={`${process.env.PUBLIC_URL}/assets/logo.png`} alt="" className="max-h-full max-w-full" />
         <div className="h-full flex-col justify-center px-4 flex overflow-y-auto">
-          <h1 className="text-sm font-bold text-white mb-1">
+          <h1 className="text-xs font-bold text-white mb-1">
             Human Resource Management Command
           </h1>
-          <h1 className="text-2xl font-bold text-[#FFDE00]">
+          <h1 className="text-md font-bold text-[#FFDE00]">
             Philippine Coast Guard
           </h1>
-          <p className="text-white text-xs mt-1">
+          <p className="text-white text-[0.7rem] mt-1">
             56 ML Quezon St., Purok 1, New Lower Bicutan, Taguig, Philippines
           </p>
         </div>

@@ -10,7 +10,7 @@ export default function NewsPage() {
     <div className="flex-1 max-h-full overflow-y-auto">
       <div
         className="flex flex-col justify-center items-center fixed bg-gray-500 cursor-pointer
-         text-gray-100 rounded-full w-12 h-12 m-2 shadow-lg  lg:hidden"
+         text-gray-100 rounded-full w-12 h-12 m-2 shadow-lg lg:hidden"
         onClick={() => setShowNewsList(true)}>
         <RxHamburgerMenu className="text-2xl " />
         <p className="text-[0.5rem]">News</p>
