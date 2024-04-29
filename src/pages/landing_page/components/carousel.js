@@ -13,15 +13,10 @@ export default function LandingCarousel() {
         stopOnHover={true}
         emulateTouch={true}
         className="">
-        <div
-          className="flex items-center rounded-md"
-          style={{
-            backgroundImage: `${process.env.PUBLIC_URL}/assets/carousel_images/1.jpg`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            width: "100%",
-            height: "100%",
-          }}
+        <img
+          src={`${process.env.PUBLIC_URL}/assets/carousel_images/1.jpg`}
+          alt="Sharing"
+          className="w-full h-full object-contain rounded-md"
         />
         <div
           className="flex items-center rounded-md"
