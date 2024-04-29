@@ -13,51 +13,35 @@ export default function LandingCarousel() {
         stopOnHover={true}
         emulateTouch={true}
         className="">
+        <div>
+          <img
+            src={`${process.env.PUBLIC_URL}/assets/carousel_images/1.jpg`}
+            alt="1"
+            className="w-full h-full object-contain rounded-md"
+          />
+        </div>
+
         <img
-          src={`${process.env.PUBLIC_URL}/assets/carousel_images/1.jpg`}
-          alt="Sharing"
+          src={`${process.env.PUBLIC_URL}/assets/carousel_images/2.jpg`}
+          alt="2"
           className="w-full h-full object-contain rounded-md"
         />
-        <div
-          className="flex items-center rounded-md"
-          style={{
-            backgroundImage: `/assets/carousel_images/2.jpg`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            width: "100%",
-            height: "100%",
-          }}
+        <img
+          src={`${process.env.PUBLIC_URL}/assets/carousel_images/3.jpg`}
+          alt="3"
+          className="w-full h-full object-contain rounded-md"
         />
-        <div
-          className="flex items-center rounded-md"
-          style={{
-            backgroundImage: `/assets/carousel_images/3.jpg`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            width: "100%",
-            height: "100%",
-          }}
+        <img
+          src={`${process.env.PUBLIC_URL}/assets/carousel_images/4.jpg`}
+          alt="4"
+          className="w-full h-full object-contain rounded-md"
         />
-        <div
-          className="flex items-center rounded-md"
-          style={{
-            backgroundImage: `/assets/carousel_images/4.jpg`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            width: "100%",
-            height: "100%",
-          }}
+        <img
+          src={`${process.env.PUBLIC_URL}/assets/carousel_images/5.jpg`}
+          alt="5"
+          className="w-full h-full object-contain rounded-md"
         />
-        <div
-          className="flex items-center rounded-md"
-          style={{
-            backgroundImage: `/assets/carousel_images/5.jpg`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            width: "100%",
-            height: "100%",
-          }}
-        />
+
       </Carousel>
     </div>
   );
