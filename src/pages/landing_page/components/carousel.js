@@ -16,7 +16,7 @@ export default function LandingCarousel() {
         <div
           className="flex items-center rounded-md"
           style={{
-            backgroundImage: `/assets/carousel_images/1.jpg`,
+            backgroundImage: `${process.env.PUBLIC_URL}/assets/carousel_images/1.jpg`,
             backgroundSize: "cover",
             backgroundPosition: "center",
             width: "100%",
