@@ -35,24 +35,22 @@ export default function Layout({ children }) {
           ))}
         </ul>
       </RightSideDrawer>
-      <div className="min-h-32 h-32 w-full bg-blue-500 flex p-4">
-        <img src={`${process.env.PUBLIC_URL}/assets/logo.png`} alt="" className="max-h-full max-w-full" />
-        <div className="h-full flex-col justify-center px-4 hidden sm:flex overflow-y-auto">
-          <h1 className="text-xs font-bold text-white mb-1">
+      <div className="min-h-[8rem] max-h-32 sm:min-h-32 h-auto w-full bg-blue-600 p-4 flex items-center">
+        <img src={`${process.env.PUBLIC_URL}/assets/logo.png`} alt="" className="h-full max-w-full" />
+        <div className="pl-4">
+          <h1 className="text-xs font-bold text-white mb-1 sm:text-sm">
             Human Resource Management Command
           </h1>
-          <h1 className="text-md font-bold text-[#FFDE00]">
+          <h1 className="text-sm font-bold text-yellow-400 sm:text-lg">
             Philippine Coast Guard
           </h1>
-          <p className="text-white text-[0.7rem] mt-1">
+          <p className="text-white text-xs sm:text-sm mt-1">
             56 ML Quezon St., Purok 1, New Lower Bicutan, Taguig, Philippines
           </p>
         </div>
       </div>
-      <div className="flex items-center px-2 py-4 bg-white shadow-md sticky top-0 z-10">
-        <h1 className="text-sm font-bold text-gray-500 block md:hidden">
-          Philippine Coast Guard
-        </h1>
+
+      <div className="flex items-center px-2 py-4 bg-gray-100 shadow-lg sticky top-0 z-10">
         <ul className="hidden h-full flex-1 justify-end items-center lg:flex">
           {MenuItems.map((item, index) => (
             <Link key={index} to={item.path}>
@@ -68,7 +66,6 @@ export default function Layout({ children }) {
           <GiHamburgerMenu className="text-3xl text-gray-500 cursor-pointer" />
         </div>
       </div>
-
       {children}
     </div>
   );
