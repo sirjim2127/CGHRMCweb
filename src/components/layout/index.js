@@ -6,6 +6,7 @@ import { useLocation } from "react-router-dom";
 
 const MenuItems = [
   { label: "Home", path: "/" },
+  { label: "Org Chart", path: "/org-chart" },
   { label: "About Us", path: "/about" },
   { label: "Newsletter", path: "/news" },
 ];
@@ -25,10 +26,11 @@ export default function Layout({ children }) {
           {MenuItems.map((item, index) => (
             <Link key={index} to={item.path}>
               <li
-                className={`${location.pathname === item.path
-                  ? "text-white bg-blue-500"
-                  : "hover:text-gray-100 hover:bg-blue-300"
-                  } text-xl py-2 px-4 rounded-md text-gray-500 font-semibold mr-4 cursor-pointer mb-1`}>
+                className={`${
+                  location.pathname === item.path
+                    ? "text-white bg-blue-500"
+                    : "hover:text-gray-100 hover:bg-blue-300"
+                } text-xl py-2 px-4 rounded-md text-gray-500 font-semibold mr-4 cursor-pointer mb-1`}>
                 {item.label}
               </li>
             </Link>
@@ -36,7 +38,11 @@ export default function Layout({ children }) {
         </ul>
       </RightSideDrawer>
       <div className="min-h-[8rem] max-h-32 sm:min-h-32 h-auto w-full bg-blue-600 p-4 flex items-center">
-        <img src={`${process.env.PUBLIC_URL}/assets/logo.png`} alt="" className="h-full max-w-full" />
+        <img
+          src={`${process.env.PUBLIC_URL}/assets/logo.png`}
+          alt=""
+          className="h-full max-w-full"
+        />
         <div className="pl-4">
           <h1 className="text-xs font-bold text-white mb-1 sm:text-sm">
             Human Resource Management Command
