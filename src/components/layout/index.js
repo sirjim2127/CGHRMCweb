@@ -5,10 +5,12 @@ import RightSideDrawer from "../drawer/right_sidedrawer";
 import { useLocation } from "react-router-dom";
 
 const MenuItems = [
-  { label: "Home", path: "/" },
-  { label: "Org Chart", path: "/org-chart" },
-  { label: "About Us", path: "/about" },
-  { label: "Newsletter", path: "/news" },
+  { label: "HOME", path: "/" },
+  { label: "ABOUT US", path: "/about" },
+  { label: "ORG CHART", path: "/org-chart" },
+  { label: "TRANSPARENCY SEAL", path: "/seal" },
+  { label: "CGHRMC PGS", path: "/PGS" },
+  { label: "PUBLICATIONS", path: "/news" },
 ];
 
 export default function Layout({ children }) {
@@ -51,7 +53,7 @@ export default function Layout({ children }) {
             Philippine Coast Guard
           </h1>
           <p className="text-white text-xs sm:text-sm mt-1">
-            56 ML Quezon St., Purok 1, New Lower Bicutan, Taguig, Philippines
+            PROFESSIONALISM INTEGRITY EXCELLENCE
           </p>
         </div>
       </div>

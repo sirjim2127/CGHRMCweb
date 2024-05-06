@@ -21,7 +21,7 @@ export default function NewsPage() {
       {/* Side Drawer */}
       <SideDrawer isOpen={showNewsList} setShow={setShowNewsList}>
         <div className="w-72 h-full max-h-full bg-white overflow-y-auto p-4">
-          <h1 className="text-lg font-bold text-blue-500 mb-4">News List</h1>
+          <h1 className="text-lg font-bold text-blue-500 mb-4">NEWSLETTER</h1>
           <ul>
             {newsData.map((item, index) => (
               <li
@@ -61,7 +61,7 @@ export default function NewsPage() {
       <div className="flex h-full max-h-full bg-gray-100">
         {/* News List (visible on large screens) */}
         <div className="w-72 h-full max-h-full bg-white overflow-y-auto p-4 lg:block hidden">
-          <h1 className="text-lg font-bold text-blue-500 mb-4">News List</h1>
+          <h1 className="text-lg font-bold text-blue-500 mb-4">NEWSLETTER</h1>
           <ul>
             {newsData.map((item, index) => (
               <li

@@ -7,21 +7,21 @@ export default function AboutPage() {
     <div className="flex-1 w-full">
       <div className="p-4">
         <Heading>
-          The Coast Guard Human Resource Management Service (COHRMS)
+          The Coast Guard Human Resource Management Service (CGHRMS)
         </Heading>
         <Content>
-          The Coast Guard Human Resource Management Service (COHRMS) traces its
+          The Coast Guard Human Resource Management Service (CGHRMS) traces its
           roots back to its activation in 2017 pursuant to Headquarters
           Phitipoine Coast Ouard General Order N 335 dated 18 August 2017 as an
           administrative support unit initially established as a part of the
           larger Deputy Chief of Coast Guard Staff for Human Resource
-          Management, CG-i, the COHRMS aimed to provide excellent, timely, and
+          Management, CG-i, the CGHRMS aimed to provide excellent, timely, and
           expeditious personnel services regarding direction, control, and
           supervision of human resource management or personnel matters within
           the PC organization. Recognizing the importance Of dedicated
           commanincorang CCHRMS was implemented a distinct and separate service
           from CG-1 in 2018 in 2019, the COHRMS took a significant step forward
-          by activating the Satellite Training institute (ST). This allowed the
+          by activating the Satellite Training institute (STI). This allowed the
           Command to rovide specialized training and development programs human
           Resource Personnel fostering their professional growth and ensuring a
           skilled workforce within the Command
@@ -63,7 +63,7 @@ export default function AboutPage() {
           hierarchical organization to provide emphasis on the identified core
           functions and support services, This reorganization resulted in the
           establishment of the Career Management Center (CMC) and Personnel
-          Management Center (MC), and the transfer of the promotion function and
+          Management Center (PMC), and the transfer of the promotion function and
           PROMEX to CMC. Concurrently, GMC broadened its scope and capabilities,
           evolving into the Retirement and Benefits Administration Service
           (RBAS). Additionally, the Attrition function was transferred to PMC,

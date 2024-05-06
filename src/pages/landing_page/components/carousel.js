@@ -40,37 +40,37 @@ export default function LandingCarousel() {
 
 const carouselItems = [
   {
-    title: "Coast Guard Command Forces",
+    title: "",
     description:
-      "The Coast Guard's elite command forces executing precision maneuvers and tactical operations to ensure maritime security and safety.",
+      "",
     img: `${process.env.PUBLIC_URL}/assets/carousel_images/1.jpg`,
     alt: "1",
   },
   {
-    title: "Search and Rescue Mission",
+    title: "",
     description:
-      "Dedicated Coast Guard teams conducting a high-stakes search and rescue mission, braving treacherous conditions to save lives at sea.",
+      "",
     img: `${process.env.PUBLIC_URL}/assets/carousel_images/2.jpg`,
     alt: "2",
   },
   {
-    title: "Coastal Patrol Duty",
+    title: "",
     description:
-      "Vigilant Coast Guard vessels patrolling the coastal waters, safeguarding against illegal activities and providing assistance to vessels in need.",
+      "",
     img: `${process.env.PUBLIC_URL}/assets/carousel_images/3.jpg`,
     alt: "3",
   },
   {
-    title: "Training and Preparedness",
+    title: "",
     description:
-      "Dedicated Coast Guard personnel participating in rigorous training exercises, honing their skills to respond effectively to any maritime emergency.",
+      "",
     img: `${process.env.PUBLIC_URL}/assets/carousel_images/4.jpg`,
     alt: "4",
   },
   {
-    title: "Maritime Surveillance Operations",
+    title: "",
     description:
-      "Utilizing cutting-edge technology and advanced surveillance systems, the Coast Guard conducts round-the-clock monitoring to detect and deter maritime threats.",
+      "",
     img: `${process.env.PUBLIC_URL}/assets/carousel_images/5.jpg`,
     alt: "5",
   },
