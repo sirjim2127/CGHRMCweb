@@ -5,6 +5,11 @@ import Content from "../../components/typography/content";
 export default function AboutPage() {
   return (
     <div className="flex-1 w-full">
+      <img
+        src={`${process.env.PUBLIC_URL}/assets/img/head_quarters.jpeg`}
+        alt={"aboutuscover"}
+        className="h-[500px] object-center w-full"
+      />
       <div className="p-4">
         <Heading>
           The Coast Guard Human Resource Management Service (CGHRMS)
