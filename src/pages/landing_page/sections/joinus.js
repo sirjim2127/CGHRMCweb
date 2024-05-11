@@ -5,7 +5,7 @@ export default function JoinUsSection() {
     <div className="h-[300px] w-full bg-blue-600 flex flex-col justify-center items-center">
       <div className="text-center">
         <h2 className="text-3xl font-bold text-white mb-8">
-          Join Our Coast Guard Team
+          Join the Coast Guard
         </h2>
         {/* <p className='text-lg text-white mb-8'>Make a difference, protect lives, safeguard our seas, and serve your country. Join the Coast Guard today!</p> */}
         <button

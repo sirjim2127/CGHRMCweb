@@ -1,10 +1,8 @@
 import React from "react";
 import LandingCarousel from "./components/carousel";
-
-import { FaFacebookMessenger, FaFacebookSquare } from "react-icons/fa";
-import { AiFillInstagram } from "react-icons/ai";
 import JoinUsSection from "./sections/joinus";
 import RelatedLinksSection from "./sections/related_links";
+import Footer from "../../components/footer";
 
 export default function LandingPage() {
   return (
@@ -12,34 +10,7 @@ export default function LandingPage() {
       <LandingCarousel />
       <JoinUsSection />
       <RelatedLinksSection />
-
-
-
-      <div className="min-h-96 w-full bg-gray-800 flex flex-col">
-        <div className="flex-1">
-
-        </div>
-        <div className="flex p-4 justify-end">
-          <FaFacebookSquare
-            className="text-3xl text-gray-200 mx-2 cursor-pointer"
-            onClick={() =>
-              (window.location.href = "https://www.facebook.com/CGHRMCOfficial")
-            }
-          />
-          <FaFacebookMessenger
-            className="text-3xl text-gray-200 mx-2 cursor-pointer"
-            onClick={() =>
-              (window.location.href = "https://www.facebook.com/CGHRMCOfficial")
-            }
-          />
-          <AiFillInstagram
-            className="text-3xl text-gray-200 mx-2 cursor-pointer"
-            onClick={() =>
-              (window.location.href = "https://www.facebook.com/CGHRMCOfficial")
-            }
-          />
-        </div>
-      </div>
+      <Footer />
     </div>
   );
 }

@@ -11,15 +11,37 @@ const MenuItems = [
   },
   { label: "CGHRMC TR", path: "/cghrmc-tr" },
   {
-    label: "ABOUT US",
-    path: "/about-us",
+    label: "ABOUT",
+    path: "",
+    dropdown: [
+      {
+        label: "CGHRMC OFFICE FOR STRATEGY MANAGEMENT",
+        path: "",
+      },
+      {
+        label: "PERFORMANCE GOVERNMENANCE SYSTEM",
+        path: "",
+        redirect: "https://isacenter.org/pgs/",
+      },
+      {
+        label: "ENTERPRISE SCORECARD",
+        path: "/scorecard",
+      },
+      {
+        label: "MULTI-SECTOR GOVERNANCE COUNCIL",
+        path: "/multi-sector",
+      },
+    ],
   },
-  { label: "ORG CHART", path: "/org-chart" },
-  { label: "TRANSPARENCY SEAL", path: "/transparency-seal" },
+
   { label: "PUBLICATIONS", path: "/news" },
+  {
+    label: "MEDIA",
+    path: "",
+  },
 ];
 
-export default function Layout({ children }) {
+export default function LayoutTr({ children }) {
   const navigate = useNavigate();
   const [showSideMenu, setShowSideMenu] = useState(false);
   const [selectedDropdown, setSelectedDropdown] = useState(null);
