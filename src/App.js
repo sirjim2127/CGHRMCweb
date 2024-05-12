@@ -10,6 +10,7 @@ import LayoutTr from "./components/layout-tr";
 import OrgchartPage from "./pages/orgchart_page";
 import ScoreCard from "./pages/scorecard";
 import MultiSectorPage from "./pages/multi_sector.js";
+import MediaPage from "./pages/media/index.js";
 function App() {
   return (
     <div className=" h-screen w-screen font-montserrat">
@@ -76,6 +77,14 @@ function App() {
             element={
               <LayoutTr>
                 <MultiSectorPage />
+              </LayoutTr>
+            }
+          />
+          <Route
+            path="/media"
+            element={
+              <LayoutTr>
+                <MediaPage />
               </LayoutTr>
             }
           />

@@ -37,7 +37,7 @@ const MenuItems = [
   { label: "PUBLICATIONS", path: "/news" },
   {
     label: "MEDIA",
-    path: "",
+    path: "/media",
   },
 ];
 
