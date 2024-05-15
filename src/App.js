@@ -9,7 +9,7 @@ import Layout from "./components/layout";
 import LayoutTr from "./components/layout-tr";
 import OrgchartPage from "./pages/orgchart_page";
 import ScoreCard from "./pages/scorecard";
-import MultiSectorPage from "./pages/multi_sector.js";
+import MultiSectorPage from "./pages/multi_sector";
 import MediaPage from "./pages/media/index.js";
 function App() {
   return (
