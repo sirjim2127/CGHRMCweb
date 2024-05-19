@@ -16,7 +16,7 @@ const MenuItems = [
     dropdown: [
       {
         label: "CGHRMC OFFICE FOR STRATEGY MANAGEMENT",
-        path: "",
+        path: "/strat-management",
       },
       {
         label: "PERFORMANCE GOVERNMENANCE SYSTEM",

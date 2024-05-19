@@ -11,6 +11,7 @@ import OrgchartPage from "./pages/orgchart_page";
 import ScoreCard from "./pages/scorecard";
 import MultiSectorPage from "./pages/multi_sector";
 import MediaPage from "./pages/media/index.js";
+import StrategyManagementPage from "./pages/strat_management/index.js";
 function App() {
   return (
     <div className=" h-screen w-screen font-montserrat">
@@ -85,6 +86,14 @@ function App() {
             element={
               <LayoutTr>
                 <MediaPage />
+              </LayoutTr>
+            }
+          />
+          <Route
+            path="/strat-management"
+            element={
+              <LayoutTr>
+                <StrategyManagementPage />
               </LayoutTr>
             }
           />
