@@ -19,7 +19,7 @@ const MenuItems = [
         path: "/strat-management",
       },
       {
-        label: "PERFORMANCE GOVERNMENANCE SYSTEM",
+        label: "PERFORMANCE GOVERNANCE SYSTEM",
         path: "",
         redirect: "https://isacenter.org/pgs/",
       },
