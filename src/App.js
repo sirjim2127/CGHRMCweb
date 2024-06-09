@@ -12,6 +12,9 @@ import ScoreCard from "./pages/scorecard";
 import MultiSectorPage from "./pages/multi_sector";
 import MediaPage from "./pages/media/index.js";
 import StrategyManagementPage from "./pages/strat_management/index.js";
+import COPage from "./pages/leadership/co/index.js";
+import CEPage from "./pages/leadership/ce/index.js";
+import DeputyPage from "./pages/leadership/deputy/index.js";
 function App() {
   return (
     <div className=" h-screen w-screen font-montserrat">
@@ -95,6 +98,30 @@ function App() {
               <LayoutTr>
                 <StrategyManagementPage />
               </LayoutTr>
+            }
+          />
+          <Route
+            path="/leadership/co"
+            element={
+              <Layout>
+                <COPage />
+              </Layout>
+            }
+          />
+          <Route
+            path="/leadership/ce"
+            element={
+              <Layout>
+                <CEPage />
+              </Layout>
+            }
+          />
+          <Route
+            path="/leadership/deputy"
+            element={
+              <Layout>
+                <DeputyPage />
+              </Layout>
             }
           />
         </Routes>

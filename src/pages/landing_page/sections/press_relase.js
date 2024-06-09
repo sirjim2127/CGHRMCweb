@@ -28,6 +28,13 @@ export default function PressReleaseSection() {
 
 const pressReleaseItems = [
   {
+    img: `${process.env.PUBLIC_URL}/assets/img/press_release/specilization_class_course_04_2024.png`,
+    title:
+      "Yeoman Specialization Course Class 04-2024 Triumphs in Defending 20 Case Studies",
+    description: "",
+    link: "https://www.facebook.com/photo/?fbid=476357581721161&set=pcb.476358828387703",
+  },
+  {
     img: `${process.env.PUBLIC_URL}/assets/img/press_release/specialization_course.png`,
     title:
       "CGHRMC-HRMS Concludes Yeoman Specialization Course CL 03-2024 AGAP-MARIPAY",

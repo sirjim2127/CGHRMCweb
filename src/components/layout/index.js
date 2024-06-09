@@ -5,18 +5,30 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { IoIosArrowDown } from "react-icons/io";
 
 const MenuItems = [
-  {
-    label: "HOME",
-    path: "/",
-  },
+  { label: "HOME", path: "/" },
   { label: "CGHRMC TR", path: "/cghrmc-tr" },
-  {
-    label: "ABOUT US",
-    path: "/about-us",
-  },
+  { label: "ABOUT US", path: "/about-us" },
   { label: "ORG CHART", path: "/org-chart" },
   { label: "TRANSPARENCY SEAL", path: "/transparency-seal" },
   { label: "PUBLICATIONS", path: "/news" },
+  {
+    label: "LEADERSHIP",
+    path: "",
+    dropdown: [
+      {
+        label: "CO",
+        path: "/leadership/co",
+      },
+      {
+        label: "CE",
+        path: "/leadership/ce",
+      },
+      {
+        label: "DEPUTY",
+        path: "/leadership/deputy",
+      },
+    ],
+  },
 ];
 
 export default function Layout({ children }) {
