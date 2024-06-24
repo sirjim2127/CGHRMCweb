@@ -11,10 +11,10 @@ export default function COPage() {
         />
       </div>
       <div>
-        <h1 className="text-2xl font-bold tracking-wider text-center px-8">
+        {/* <h1 className="text-2xl font-bold tracking-wider text-center px-8">
           INTRODUCTION
-        </h1>
-        <p className="text-justify p-8 text-gray-700">
+        </h1> */}
+        <p className="text-justify px-8 pb-8 text-gray-700">
           <span className="font-bold">
             COAST GUARD REAR ADMIRAL ALLEN J DALANGIN O-11821,
           </span>
