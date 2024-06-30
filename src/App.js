@@ -15,6 +15,11 @@ import StrategyManagementPage from "./pages/strat_management/index.js";
 import COPage from "./pages/leadership/co/index.js";
 import CEPage from "./pages/leadership/ce/index.js";
 import DeputyPage from "./pages/leadership/deputy/index.js";
+import MeasureAndTargetProfilePage from "./pages/tutorials/measure_and_target_profile/index.js";
+import PerformanceScoreCard from "./pages/tutorials/performance_scoreboard/index.js";
+import PerformanceScorecardChardUpdatePage from "./pages/tutorials/performance_scorecard_chart_updating/index.js";
+import OperationReviewPage from "./pages/tutorials/operation_review/index.js";
+import StrategyReviewPage from "./pages/tutorials/strategy_review/index.js";
 function App() {
   return (
     <div className=" h-screen w-screen font-montserrat">
@@ -124,10 +129,70 @@ function App() {
               </Layout>
             }
           />
+          <Route
+            path="/tutorials/performance-scorecard"
+            element={
+              <Layout>
+                <PerformanceScoreCard />
+              </Layout>
+            }
+          />
+          <Route
+            path="/tutorials/measure-and-target-profile"
+            element={
+              <Layout>
+                <MeasureAndTargetProfilePage />
+              </Layout>
+            }
+          />
+          <Route
+            path="/tutorials/performance-scorecard-chat-updating"
+            element={
+              <Layout>
+                <PerformanceScorecardChardUpdatePage />
+              </Layout>
+            }
+          />
+          <Route
+            path="/tutorials/operation-review"
+            element={
+              <Layout>
+                <OperationReviewPage />
+              </Layout>
+            }
+          />
+          <Route
+            path="/tutorials/strategy-review"
+            element={
+              <Layout>
+                <StrategyReviewPage />
+              </Layout>
+            }
+          />
         </Routes>
       </HashRouter>
     </div>
   );
 }
 
+// {
+//   label: "PERFORMANCE SCORECARD",
+//   path: "/tutorials/performance-scorecard",
+// },
+// {
+//   label: "MEASURE AND TARGET PROFILE",
+//   path: "/tutorials/measure-and-target-profile",
+// },
+// {
+//   label: "PERFORMANCE SCORECARD CHART UPDATING",
+//   path: "/tutorials/performance-scorecard-chat-updating",
+// },
+// {
+//   label: "OPERATION REVIEW",
+//   path: "/tutorials/operation-review",
+// },
+// {
+//   label: "STRATEGY REVIEW",
+//   path: "/tutorials/strategy-review",
+// },
 export default App;

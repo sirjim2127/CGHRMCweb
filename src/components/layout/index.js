@@ -29,6 +29,32 @@ const MenuItems = [
       },
     ],
   },
+  {
+    label: "TUTORIALS",
+    path: "",
+    dropdown: [
+      {
+        label: "PERFORMANCE SCORECARD",
+        path: "/tutorials/performance-scorecard",
+      },
+      {
+        label: "MEASURE AND TARGET PROFILE",
+        path: "/tutorials/measure-and-target-profile",
+      },
+      {
+        label: "PERFORMANCE SCORECARD CHART UPDATING",
+        path: "/tutorials/performance-scorecard-chat-updating",
+      },
+      {
+        label: "OPERATION REVIEW",
+        path: "/tutorials/operation-review",
+      },
+      {
+        label: "STRATEGY REVIEW",
+        path: "/tutorials/strategy-review",
+      },
+    ],
+  },
 ];
 
 export default function Layout({ children }) {
@@ -56,10 +82,11 @@ export default function Layout({ children }) {
                 }
               }}>
               <li
-                className={`${location.pathname === item.path
-                  ? "text-white bg-blue-500"
-                  : "hover:text-gray-100 hover:bg-blue-300"
-                  } flex items-center text-md py-2 px-4 rounded-md text-gray-500 font-semibold mr-4 cursor-pointer mb-1`}
+                className={`${
+                  location.pathname === item.path
+                    ? "text-white bg-blue-500"
+                    : "hover:text-gray-100 hover:bg-blue-300"
+                } flex items-center text-md py-2 px-4 rounded-md text-gray-500 font-semibold mr-4 cursor-pointer mb-1`}
                 onClick={() => {
                   if (index === selectedDropdown) {
                     setSelectedDropdown(null);
