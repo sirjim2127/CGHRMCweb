@@ -13,7 +13,7 @@ export default function TutorialsPage() {
             <iframe
               src={tutorial.src}
               className="w-full aspect-video"
-              allow="autoplay; encrypted-media"
+              allow="encrypted-media"
               allowFullScreen
               title="video-1"
             />
