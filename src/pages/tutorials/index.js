@@ -10,12 +10,11 @@ export default function TutorialsPage() {
             <h1 className="mb-2 text-blue-500 font-semibold">
               {tutorial.title}
             </h1>
-            <iframe
+            <video
               src={tutorial.src}
               className="w-full aspect-video"
-              allow="encrypted-media"
-              allowFullScreen
-              title="video-1"
+              controls
+              title={`video-${index}`}
             />
           </div>
         ))}
