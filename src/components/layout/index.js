@@ -31,28 +31,28 @@ const MenuItems = [
   },
   {
     label: "TUTORIALS",
-    path: "",
+    path: "/tutorials",
     dropdown: [
-      {
-        label: "PERFORMANCE SCORECARD",
-        path: "/tutorials/performance-scorecard",
-      },
-      {
-        label: "MEASURE AND TARGET PROFILE",
-        path: "/tutorials/measure-and-target-profile",
-      },
-      {
-        label: "PERFORMANCE SCORECARD CHART UPDATING",
-        path: "/tutorials/performance-scorecard-chat-updating",
-      },
-      {
-        label: "OPERATION REVIEW",
-        path: "/tutorials/operation-review",
-      },
-      {
-        label: "STRATEGY REVIEW",
-        path: "/tutorials/strategy-review",
-      },
+      // {
+      //   label: "PERFORMANCE SCORECARD",
+      //   path: "/tutorials/performance-scorecard",
+      // },
+      // {
+      //   label: "MEASURE AND TARGET PROFILE",
+      //   path: "/tutorials/measure-and-target-profile",
+      // },
+      // {
+      //   label: "PERFORMANCE SCORECARD CHART UPDATING",
+      //   path: "/tutorials/performance-scorecard-chat-updating",
+      // },
+      // {
+      //   label: "OPERATION REVIEW",
+      //   path: "/tutorials/operation-review",
+      // },
+      // {
+      //   label: "STRATEGY REVIEW",
+      //   path: "/tutorials/strategy-review",
+      // },
     ],
   },
 ];
