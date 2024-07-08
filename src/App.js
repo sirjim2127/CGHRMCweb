@@ -15,12 +15,12 @@ import StrategyManagementPage from "./pages/strat_management/index.js";
 import COPage from "./pages/leadership/co/index.js";
 import CEPage from "./pages/leadership/ce/index.js";
 import DeputyPage from "./pages/leadership/deputy/index.js";
-import MeasureAndTargetProfilePage from "./pages/tutorials/measure_and_target_profile/index.js";
-import PerformanceScoreCard from "./pages/tutorials/performance_scoreboard/index.js";
-import PerformanceScorecardChardUpdatePage from "./pages/tutorials/performance_scorecard_chart_updating/index.js";
-import OperationReviewPage from "./pages/tutorials/operation_review/index.js";
-import StrategyReviewPage from "./pages/tutorials/strategy_review/index.js";
-import TutorialsPage from "./pages/tutorials/index.js";
+// import MeasureAndTargetProfilePage from "./pages/tutorials/measure_and_target_profile/index.js";
+// import PerformanceScoreCard from "./pages/tutorials/performance_scoreboard/index.js";
+// import PerformanceScorecardChardUpdatePage from "./pages/tutorials/performance_scorecard_chart_updating/index.js";
+// import OperationReviewPage from "./pages/tutorials/operation_review/index.js";
+// import StrategyReviewPage from "./pages/tutorials/strategy_review/index.js";
+import TutorialsPage from "./pages/media/tutorials/index.js";
 function App() {
   return (
     <div className=" h-screen w-screen font-montserrat">
@@ -131,11 +131,11 @@ function App() {
             }
           />
           <Route
-            path="/tutorials"
+            path="/media/tutorials"
             element={
-              <Layout>
+              <LayoutTr>
                 <TutorialsPage />
-              </Layout>
+              </LayoutTr>
             }
           />
           {/* <Route

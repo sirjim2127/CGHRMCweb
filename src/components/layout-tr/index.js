@@ -38,6 +38,12 @@ const MenuItems = [
   {
     label: "MEDIA",
     path: "/media",
+    dropdown: [
+      {
+        label: "TUTORIALS",
+        path: "/media/tutorials",
+      },
+    ],
   },
 ];
 
