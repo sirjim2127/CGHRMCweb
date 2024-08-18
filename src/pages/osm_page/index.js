@@ -13,7 +13,7 @@ export default function OSM() {
             setAccessPage("isc");
         }
         else{
-            Swal.fire("Login Failed", JSON.stringify(formData), "error");
+            Swal.fire("Login Failed", "Invalid Access", "error");
         }
     };
     if(accessPage === "signin") 
