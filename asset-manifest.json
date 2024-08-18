@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/coastguardweb/static/css/main.caccabe8.css",
+    "main.js": "/coastguardweb/static/js/main.9a495120.js",
+    "static/media/Montserrat-VariableFont_wght.ttf": "/coastguardweb/static/media/Montserrat-VariableFont_wght.7e687123cd4528224ce5.ttf",
+    "index.html": "/coastguardweb/index.html",
+    "main.caccabe8.css.map": "/coastguardweb/static/css/main.caccabe8.css.map",
+    "main.9a495120.js.map": "/coastguardweb/static/js/main.9a495120.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.caccabe8.css",
+    "static/js/main.9a495120.js"
+  ]
+}
