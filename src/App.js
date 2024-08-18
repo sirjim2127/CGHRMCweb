@@ -15,6 +15,7 @@ import StrategyManagementPage from "./pages/strat_management/index.js";
 import COPage from "./pages/leadership/co/index.js";
 import CEPage from "./pages/leadership/ce/index.js";
 import DeputyPage from "./pages/leadership/deputy/index.js";
+import OSM from "./pages/osm_page/index.js";
 // import MeasureAndTargetProfilePage from "./pages/tutorials/measure_and_target_profile/index.js";
 // import PerformanceScoreCard from "./pages/tutorials/performance_scoreboard/index.js";
 // import PerformanceScorecardChardUpdatePage from "./pages/tutorials/performance_scorecard_chart_updating/index.js";
@@ -136,6 +137,14 @@ function App() {
               <LayoutTr>
                 <TutorialsPage />
               </LayoutTr>
+            }
+          />
+           <Route
+            path="/osm"
+            element={
+              <Layout>
+                <OSM />
+              </Layout>
             }
           />
           {/* <Route

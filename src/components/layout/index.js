@@ -29,6 +29,7 @@ const MenuItems = [
       },
     ],
   },
+  { label: "OSM", path: "/osm" },
   // {
   //   label: "TUTORIALS",
   //   path: "/tutorials",
