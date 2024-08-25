@@ -6,56 +6,61 @@ import { IoIosArrowDown } from "react-icons/io";
 
 const MenuItems = [
   { label: "HOME", path: "/" },
-  { label: "CGHRMC TR", path: "/cghrmc-tr" },
+  {
+    label: "CGHRMC TR",
+    path: "",
+    dropdown: [
+      {
+        label: "CGHRMC TR",
+        path: "/cghrmc-tr",
+      },
+      {
+        label: "CGHRMC OFFICE FOR STRATEGY MANAGEMENT",
+        path: "/strat-management",
+      },
+      {
+        label: "PERFORMANCE GOVERNANCE SYSTEM",
+        path: "",
+        redirect: "https://isacenter.org/pgs/",
+      },
+      {
+        label: "ENTERPRISE SCORECARD",
+        path: "/scorecard",
+      },
+      {
+        label: "MULTI-SECTOR GOVERNANCE COUNCIL",
+        path: "/multi-sector",
+      },
+    ],
+  },
   { label: "ABOUT US", path: "/about-us" },
   { label: "ORG CHART", path: "/org-chart" },
   { label: "TRANSPARENCY SEAL", path: "/transparency-seal" },
   { label: "PUBLICATIONS", path: "/news" },
   {
-    label: "LEADERSHIP",
+    label: "MEDIA",
     path: "",
     dropdown: [
       {
-        label: "COMMANDER",
-        path: "/leadership/co",
+        label: "MEDIA",
+        path: "/media",
       },
       {
-        label: "DEPUTY",
-        path: "/leadership/deputy",
-      },
-      {
-        label: "CHIEF OF STAFF",
-        path: "/leadership/ce",
+        label: "TUTORIALS",
+        path: "/media/tutorials",
       },
     ],
   },
+  {
+    label: "LEADERSHIP",
+    path: "",
+    dropdown: [
+      { label: "COMMANDER", path: "/leadership/co" },
+      { label: "DEPUTY", path: "/leadership/deputy" },
+      { label: "CHIEF OF STAFF", path: "/leadership/ce" },
+    ],
+  },
   { label: "OSM", path: "/osm" },
-  // {
-  //   label: "TUTORIALS",
-  //   path: "/tutorials",
-  //   dropdown: [
-  // {
-  //   label: "PERFORMANCE SCORECARD",
-  //   path: "/tutorials/performance-scorecard",
-  // },
-  // {
-  //   label: "MEASURE AND TARGET PROFILE",
-  //   path: "/tutorials/measure-and-target-profile",
-  // },
-  // {
-  //   label: "PERFORMANCE SCORECARD CHART UPDATING",
-  //   path: "/tutorials/performance-scorecard-chat-updating",
-  // },
-  // {
-  //   label: "OPERATION REVIEW",
-  //   path: "/tutorials/operation-review",
-  // },
-  // {
-  //   label: "STRATEGY REVIEW",
-  //   path: "/tutorials/strategy-review",
-  // },
-  //   ],
-  // },
 ];
 
 export default function Layout({ children }) {
@@ -66,117 +71,158 @@ export default function Layout({ children }) {
 
   useEffect(() => {
     setShowSideMenu(false);
+    setSelectedDropdown(null);
   }, [location]);
 
-  return (
-    <div className="w-screen h-screen flex flex-col overflow-y-auto">
-      <RightSideDrawer isOpen={showSideMenu} setShow={setShowSideMenu}>
-        <ul className="h-full flex-1 justify-end items-center p-4 w-96">
-          {MenuItems.map((item, index) => (
-            <div
-              key={index}
-              onClick={() => {
-                if (item?.path) {
-                  if (!(location.pathname === item.path)) {
-                    navigate(item.path);
-                  }
-                }
-              }}>
-              <li
-                className={`${
-                  location.pathname === item.path
-                    ? "text-white bg-blue-500"
-                    : "hover:text-gray-100 hover:bg-blue-300"
-                } flex items-center text-md py-2 px-4 rounded-md text-gray-500 font-semibold mr-4 cursor-pointer mb-1`}
-                onClick={() => {
-                  if (index === selectedDropdown) {
-                    setSelectedDropdown(null);
-                  } else {
-                    setSelectedDropdown(index);
-                  }
-                }}>
-                {item.label}
+  const handleMenuItemClick = (item, index) => {
+    if (item.path) {
+      navigate(item.path);
+    }
+    if (item.dropdown) {
+      setSelectedDropdown(selectedDropdown === index ? null : index);
+    } else {
+      setShowSideMenu(false);
+    }
+  };
 
-                <IoIosArrowDown
-                  className={`text-xl mx-2 transition ease-in-out delay-300
-                  ${item.dropdown?.length > 0 ? "" : "hidden "} 
-                  ${selectedDropdown === index ? " -rotate-180" : ""}`}
-                />
-              </li>
-              <ul
-                className={`text-sm font-semibold overflow-hidden transition-all ease-in-out delay-300 text-gray-500 px-4 
-                ${selectedDropdown === index ? "max-h-screen" : "max-h-0"}`}>
-                {item?.dropdown?.map((dropItem, index) => (
-                  <li
-                    key={index}
-                    className="px-8 py-2 rounded-lg hover:bg-blue-300 hover:text-gray-100 cursor-pointer"
-                    onClick={() => {
-                      if (dropItem?.redirect)
-                        window.open(dropItem?.redirect, "_black");
-                      if (dropItem?.path) {
-                        navigate(dropItem?.path);
-                      }
-                    }}>
-                    {dropItem.label}
-                  </li>
-                ))}
-              </ul>
+  return (
+    <div className="w-full h-full flex flex-col overflow-y-auto">
+      {/* Side Drawer */}
+      <RightSideDrawer isOpen={showSideMenu} setShow={setShowSideMenu}>
+        <div className="text-sm fixed top-0 right-0 h-full bg-gray-100 z-50 shadow-lg overflow-y-auto p-4 w-96">
+          <header className=" p-4 flex items-center justify-between">
+            <div className="flex items-center">
+              <img
+                src={`${process.env.PUBLIC_URL}/assets/logo.png`}
+                alt="Logo"
+                className="h-16 w-auto sm:h-20"
+              />
+              <div className="ml-4 block">
+                <h1 className="text-sm font-bold text-gray-700  ">
+                  Human Resource Management Command
+                </h1>
+                <h1 className="text-sm font-bold text-yellow-400">
+                  Philippine Coast Guard
+                </h1>
+              </div>
             </div>
+          </header>
+          <ul className="flex flex-col h-full">
+            {MenuItems.map((item, index) => (
+              <div key={index} className="w-full">
+                <li
+                  className={`${
+                    location.pathname === item.path
+                      ? "text-white bg-blue-500"
+                      : "hover:text-white hover:bg-blue-300"
+                  } flex justify-between items-center text-md py-2 px-4 rounded-md text-gray-700 font-semibold cursor-pointer mb-1`}
+                  onClick={() => handleMenuItemClick(item, index)}>
+                  {item.label}
+                  {item.dropdown && (
+                    <IoIosArrowDown
+                      className={`text-xl mx-2 transition-transform duration-300 ${
+                        selectedDropdown === index ? "-rotate-180" : ""
+                      }`}
+                    />
+                  )}
+                </li>
+                {item.dropdown && selectedDropdown === index && (
+                  <ul className="pl-6 text-sm font-semibold text-gray-700">
+                    {item.dropdown.map((dropItem, subIndex) => (
+                      <li
+                        key={subIndex}
+                        className="py-2 cursor-pointer hover:text-white hover:bg-blue-300 rounded-md"
+                        onClick={() => {
+                          if (dropItem.redirect) {
+                            window.location.href = dropItem.redirect;
+                          } else if (dropItem.path) {
+                            navigate(dropItem.path);
+                          }
+                          setShowSideMenu(false);
+                        }}>
+                        {dropItem.label}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            ))}
+          </ul>
+        </div>
+      </RightSideDrawer>
+
+      {/* Header */}
+      <header className="bg-blue-600 p-4 flex items-center justify-between">
+        <div className="flex items-center">
+          <img
+            src={`${process.env.PUBLIC_URL}/assets/logo.png`}
+            alt="Logo"
+            className="h-16 w-auto sm:h-20"
+          />
+          <div className="ml-4 block">
+            <h1 className="text-xs font-bold text-white sm:text-sm">
+              Human Resource Management Command
+            </h1>
+            <h1 className="text-sm font-bold text-yellow-400 sm:text-lg">
+              Philippine Coast Guard
+            </h1>
+            <p className="text-white text-xs sm:text-sm mt-1">
+              PROFESSIONALISM INTEGRITY EXCELLENCE
+            </p>
+          </div>
+        </div>
+      </header>
+
+      {/* Desktop Menu */}
+      <nav className="text-xs bg-gray-100 shadow-lg w-full py-4 sticky top-0 z-10 flex justify-end">
+        <div
+          className="lg:hidden flex items-center cursor-pointer text-gray-500 mr-2 border rounded-md p-1 border-gray-300"
+          onClick={() => setShowSideMenu(true)}>
+          <GiHamburgerMenu className="text-3xl" />
+        </div>
+        <ul className="hidden lg:flex items-center w-full px-6 space-x-4">
+          {MenuItems.map((item, index) => (
+            <li
+              key={index}
+              className={`flex relative px-4 py-2 text-gray-700 font-semibold cursor-pointer hover:text-blue-500 ${
+                location.pathname === item.path ? "text-blue-500" : ""
+              }`}
+              onMouseEnter={() => setSelectedDropdown(index)}
+              onMouseLeave={() => setSelectedDropdown(null)}
+              onClick={() => handleMenuItemClick(item, index)}>
+              {item.label}
+              {item.dropdown && (
+                <IoIosArrowDown
+                  className={`text-sm ml-1 transition-transform duration-300 ${
+                    selectedDropdown === index ? "-rotate-180" : ""
+                  }`}
+                />
+              )}
+              {item.dropdown && selectedDropdown === index && (
+                <ul className="absolute left-0 top-full bg-white border border-gray-200 shadow-lg rounded-md w-96 text-gray-700">
+                  {item.dropdown.map((dropItem, subIndex) => (
+                    <li
+                      key={subIndex}
+                      className="px-4 py-2 hover:bg-gray-100"
+                      onClick={() => {
+                        if (dropItem.redirect) {
+                          window.location.href = dropItem.redirect;
+                        } else if (dropItem.path) {
+                          navigate(dropItem.path);
+                        }
+                        setSelectedDropdown(null); // Close dropdown after click
+                      }}>
+                      {dropItem.label}
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </li>
           ))}
         </ul>
-      </RightSideDrawer>
-      <div className="min-h-[8rem] max-h-32 sm:min-h-32 h-auto w-full bg-blue-600 p-4 flex items-center">
-        <img
-          src={`${process.env.PUBLIC_URL}/assets/logo.png`}
-          alt=""
-          className="h-full max-w-full"
-        />
-        <div className="pl-4">
-          <h1 className="text-xs font-bold text-white mb-1 sm:text-sm">
-            Human Resource Management Command
-          </h1>
-          <h1 className="text-sm font-bold text-yellow-400 sm:text-lg">
-            Philippine Coast Guard
-          </h1>
-          <p className="text-white text-xs sm:text-sm mt-1">
-            PROFESSIONALISM INTEGRITY EXCELLENCE
-          </p>
-        </div>
-      </div>
+      </nav>
 
-      <div className="flex items-center px-2 py-4 bg-gray-100 shadow-lg sticky top-0 z-10">
-        {/* <ul className="hidden h-full flex-1 justify-end items-center lg:flex">
-          {MenuItems.map((item, index) => (
-            <Link key={index} to={item.path}>
-              <li
-                className="text-md text-gray-500 font-semibold mr-4 cursor-pointer hover:text-blue-500"
-                onMouseEnter={() => {
-                  setSelectedDropdown(index);
-                }}>
-                {item.label}
-                {index === selectedDropdown && item?.dropdown?.length > 0 && (
-                  <div
-                    className="absolute z-10 top-full bg-white border border-gray-200 shadow-lg rounded-md text-gray-700"
-                    onMouseLeave={() => setSelectedDropdown(null)}>
-                    <ul>
-                      {item.dropdown.map((dropItem, index) => (
-                        <li key={index} className="px-4 py-2 hover:bg-gray-100">
-                          {dropItem.label}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-              </li>
-            </Link>
-          ))}
-        </ul> */}
-        <div
-          className="flex-1 h-full flex justify-end items-center"
-          onClick={() => setShowSideMenu(true)}>
-          <GiHamburgerMenu className="text-3xl text-gray-500 cursor-pointer" />
-        </div>
-      </div>
+      {/* Main Content */}
       {children}
     </div>
   );

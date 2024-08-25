@@ -6,7 +6,7 @@ import NewsPage from "./pages/news";
 import CGHRMCTRPage from "./pages/cghrmctr";
 import TransparencySeal from "./pages/transparency_seal";
 import Layout from "./components/layout";
-import LayoutTr from "./components/layout-tr";
+// import LayoutTr from "./components/layout-tr";
 import OrgchartPage from "./pages/orgchart_page";
 import ScoreCard from "./pages/scorecard";
 import MultiSectorPage from "./pages/multi_sector";
@@ -62,9 +62,9 @@ function App() {
           <Route
             path="/cghrmc-tr"
             element={
-              <LayoutTr>
+              <Layout>
                 <CGHRMCTRPage />
-              </LayoutTr>
+              </Layout>
             }
           />
           <Route
@@ -78,33 +78,33 @@ function App() {
           <Route
             path="/scorecard"
             element={
-              <LayoutTr>
+              <Layout>
                 <ScoreCard />
-              </LayoutTr>
+              </Layout>
             }
           />
           <Route
             path="/multi-sector"
             element={
-              <LayoutTr>
+              <Layout>
                 <MultiSectorPage />
-              </LayoutTr>
+              </Layout>
             }
           />
           <Route
             path="/media"
             element={
-              <LayoutTr>
+              <Layout>
                 <MediaPage />
-              </LayoutTr>
+              </Layout>
             }
           />
           <Route
             path="/strat-management"
             element={
-              <LayoutTr>
+              <Layout>
                 <StrategyManagementPage />
-              </LayoutTr>
+              </Layout>
             }
           />
           <Route
@@ -134,12 +134,12 @@ function App() {
           <Route
             path="/media/tutorials"
             element={
-              <LayoutTr>
+              <Layout>
                 <TutorialsPage />
-              </LayoutTr>
+              </Layout>
             }
           />
-           <Route
+          <Route
             path="/osm"
             element={
               <Layout>
