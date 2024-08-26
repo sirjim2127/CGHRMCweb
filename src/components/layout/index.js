@@ -157,7 +157,7 @@ export default function Layout({ children }) {
           <img
             src={`${process.env.PUBLIC_URL}/assets/logo.png`}
             alt="Logo"
-            className="h-16 w-auto sm:h-20"
+            className="h-16 w-auto md:h-32 transition ease-in-out delay-300"
           />
           <div className="ml-4 block">
             <h1 className="text-xs font-bold text-white sm:text-sm">

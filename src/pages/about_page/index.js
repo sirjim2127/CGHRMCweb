@@ -10,7 +10,7 @@ export default function AboutPage() {
         <img
           src={`${process.env.PUBLIC_URL}/assets/img/head_quarters.jpeg`}
           alt={"aboutuscover"}
-          className="h-[500px] object-center w-full"
+          className="object-cover relative w-full h-[500px]"
         />
         <div className="p-4">
           <Heading>

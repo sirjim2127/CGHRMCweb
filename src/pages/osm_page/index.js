@@ -20,7 +20,7 @@ export default function OSM() {
   };
   if (accessPage === "signin")
     return (
-      <div className="max-w-lg w-full h-full mx-auto py-8">
+      <div className="max-w-lg w-full h-full mx-auto py-8 px-4">
         <div
           style={{
             boxShadow:
