@@ -22,13 +22,13 @@ export default function OSM() {
   if (accessPage === "signin")
     return (
       <div className="w-full h-full mx-auto py-8 px-4">
-        <div className="h-full  md:flex md:space-y-0 space-y-2 space-x-0 md:space-x-2">
+        <div className="h-full flex-row md:flex md:space-y-0 space-y-2 space-x-0 md:space-x-2">
           <div
             style={{
               boxShadow:
                 "0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
             }}
-            className="bg-white rounded-lg shadow-xl flex-1">
+            className="bg-white rounded-lg shadow-xl flex-1 overflow-hidden">
             <div className="p-8">
               <h2 className="text-center text-3xl font-extrabold text-gray-700">
                 Welcome Back
@@ -91,7 +91,7 @@ export default function OSM() {
                 <Button type={"submit"}>Sign In</Button>
               </form>
             </div>
-            <div className="px-8 py-4 bg-gray-300 text-center">
+            <div className="px-8 py-4 bg-gray-300 text-center mt-20">
               <span className="text-gray-400">Don't have an account?</span>
               <Link
                 className="font-medium text-indigo-500 hover:text-indigo-400"
