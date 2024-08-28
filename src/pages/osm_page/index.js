@@ -4,6 +4,7 @@ import Button from "../../components/button/button";
 import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
 import FillUp from "./components/fillup";
+import GoogleSheetData from "./components/googlesheetdata";
 
 export default function OSM() {
   const [accessPage, setAccessPage] = useState("signin");
@@ -111,16 +112,18 @@ export default function OSM() {
 
   if (accessPage === "isc")
     return (
-      <div className="w-full h-full">
-        <iframe
+      <div className="w-full h-[100vh]">
+        <GoogleSheetData />
+        {/* <iframe
           src={`${process.env.PUBLIC_URL}/assets/excel_files/ISC.pdf`}
           width="100%"
           height="100%"
           frameBorder="0"
-          title="Excel Viewer"></iframe>
+          title="Excel Viewer"></iframe> */}
         <div className="px-4 py-2">
           <Button onClick={() => setAccessPage("signin")}>Signout</Button>
         </div>
+
       </div>
     );
 }
