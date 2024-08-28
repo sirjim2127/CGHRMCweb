@@ -12,7 +12,7 @@ export default function AboutPage() {
           alt={"aboutuscover"}
           className="object-cover relative w-full h-[500px]"
         />
-        <div className="p-4">
+        <div className="py-4 px-8">
           <Heading>
             The Coast Guard Human Resource Management Service (CGHRMS)
           </Heading>

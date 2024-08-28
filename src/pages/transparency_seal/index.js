@@ -1,5 +1,5 @@
 import React from "react";
 
 export default function TransparencySealPage() {
-  return <div>TransparencySealPage</div>;
+  return <div className="h-[100vh]">TransparencySealPage</div>;
 }

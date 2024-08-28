@@ -11,7 +11,7 @@ export default function CGHRMCTRPage() {
         className="h-[500px] object-center w-full"
       />
       <OtherLogo />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

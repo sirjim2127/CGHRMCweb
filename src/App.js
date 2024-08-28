@@ -5,7 +5,7 @@ import AboutPage from "./pages/about_page";
 import NewsPage from "./pages/news";
 import CGHRMCTRPage from "./pages/cghrmctr";
 import TransparencySeal from "./pages/transparency_seal";
-import Layout from "./components/layout";
+import Layout from "./components/layout2";
 // import LayoutTr from "./components/layout-tr";
 import OrgchartPage from "./pages/orgchart_page";
 import ScoreCard from "./pages/scorecard";
@@ -16,6 +16,7 @@ import COPage from "./pages/leadership/co/index.js";
 import CEPage from "./pages/leadership/ce/index.js";
 import DeputyPage from "./pages/leadership/deputy/index.js";
 import OSM from "./pages/osm_page/index.js";
+import LandingPage2 from "./pages/landing_page2/index.js";
 // import MeasureAndTargetProfilePage from "./pages/tutorials/measure_and_target_profile/index.js";
 // import PerformanceScoreCard from "./pages/tutorials/performance_scoreboard/index.js";
 // import PerformanceScorecardChardUpdatePage from "./pages/tutorials/performance_scorecard_chart_updating/index.js";
@@ -28,11 +29,20 @@ function App() {
       <HashRouter>
         <Routes>
           <Route
-            path="/"
+            path="/2"
             element={
               <Layout>
                 <LandingPage />
               </Layout>
+            }
+          />
+          <Route
+            path="/"
+            element={
+              <Layout>
+                <LandingPage2 />
+              </Layout>
+
             }
           />
           <Route

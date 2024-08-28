@@ -20,7 +20,7 @@ export default function NewsPage() {
 
       {/* Side Drawer */}
       <SideDrawer isOpen={showNewsList} setShow={setShowNewsList}>
-        <div className="w-72 h-full max-h-full bg-white overflow-y-auto p-4">
+        <div className="w-72 max-h-full bg-white overflow-y-auto p-4">
           <h1 className="text-lg font-bold text-blue-500 mb-4">NEWSLETTER</h1>
           <ul>
             {newsData.map((item, index) => (
@@ -31,22 +31,22 @@ export default function NewsPage() {
                   setShowNewsList(false);
                 }}
                 className={`${currentNews === item.newsFile
-                    ? "bg-blue-500 text-gray-100"
-                    : "hover:bg-blue-100"
+                  ? "bg-blue-500 text-gray-100"
+                  : "hover:bg-blue-100"
                   } p-2  cursor-pointer rounded-md mb-1`}
               >
                 <h1
                   className={`${currentNews === item.newsFile
-                      ? "text-gray-100"
-                      : "text-gray-400"
+                    ? "text-gray-100"
+                    : "text-gray-400"
                     } text-sm text-gray-700 font-semibold`}
                 >
                   {item.title}
                 </h1>
                 <p
                   className={`${currentNews === item.newsFile
-                      ? "text-gray-100"
-                      : "text-gray-400"
+                    ? "text-gray-100"
+                    : "text-gray-400"
                     } text-xs `}
                 >
                   {item.date}
@@ -58,7 +58,7 @@ export default function NewsPage() {
       </SideDrawer>
 
       {/* News List and PDF Viewer */}
-      <div className="flex h-full max-h-full bg-gray-100">
+      <div className="flex h-full max-h-full">
         {/* News List (visible on large screens) */}
         <div className="w-72 h-full max-h-full bg-white overflow-y-auto p-4 lg:block hidden">
           <h1 className="text-lg font-bold text-blue-500 mb-4">NEWSLETTER</h1>
@@ -70,22 +70,22 @@ export default function NewsPage() {
                   setCurrentNews(item.newsFile);
                 }}
                 className={`${currentNews === item.newsFile
-                    ? "bg-blue-500 text-gray-100"
-                    : "hover:bg-blue-100"
+                  ? "bg-blue-500 text-gray-100"
+                  : "hover:bg-blue-100"
                   } p-2  cursor-pointer rounded-md mb-1`}
               >
                 <h1
                   className={`${currentNews === item.newsFile
-                      ? "text-gray-100"
-                      : "text-gray-400"
+                    ? "text-gray-100"
+                    : "text-gray-400"
                     } text-sm text-gray-700 font-semibold`}
                 >
                   {item.title}
                 </h1>
                 <p
                   className={`${currentNews === item.newsFile
-                      ? "text-gray-100"
-                      : "text-gray-400"
+                    ? "text-gray-100"
+                    : "text-gray-400"
                     } text-xs `}
                 >
                   {item.date}
@@ -96,7 +96,7 @@ export default function NewsPage() {
         </div>
 
         {/* PDF Viewer */}
-        <div className="flex-1 h-full w-full">
+        <div className="flex-1 h-[100vh] w-full">
           <iframe
             title="PDF Viewer"
             src={currentNews}
