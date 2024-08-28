@@ -1,6 +1,6 @@
 import React from "react";
 import OtherLogo from "./sections/other_logo";
-import Footer from "../../components/footer";
+// import Footer from "../../components/footer";
 
 export default function CGHRMCTRPage() {
   return (

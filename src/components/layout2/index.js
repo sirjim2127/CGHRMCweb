@@ -130,7 +130,7 @@ export default function Layout({ children }) {
                         alt="Logo"
                         className="h-12"
                     />
-                    <label className='text-2xl font-semibold text-gray-100'>Coastguard</label>
+                    <label className='text-lg font-semibold text-gray-100'>Human Resource Management Command</label>
                 </div>
 
                 <ul className='h-full hidden lg:flex items-center space-x-3 px-2 font-medium text-gray-100 text-xs'>
