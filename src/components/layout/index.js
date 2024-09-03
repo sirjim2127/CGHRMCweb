@@ -7,7 +7,7 @@ import { IoIosArrowDown } from "react-icons/io";
 const MenuItems = [
   { label: "HOME", path: "/" },
   {
-    label: "CGHRMC TR",
+    label: "CHANGE 2028",
     path: "",
     dropdown: [
       {
@@ -111,18 +111,16 @@ export default function Layout({ children }) {
             {MenuItems.map((item, index) => (
               <div key={index} className="w-full">
                 <li
-                  className={`${
-                    location.pathname === item.path
+                  className={`${location.pathname === item.path
                       ? "text-white bg-blue-500"
                       : "hover:text-white hover:bg-blue-300"
-                  } flex justify-between items-center text-md py-2 px-4 rounded-md text-gray-700 font-semibold cursor-pointer mb-1`}
+                    } flex justify-between items-center text-md py-2 px-4 rounded-md text-gray-700 font-semibold cursor-pointer mb-1`}
                   onClick={() => handleMenuItemClick(item, index)}>
                   {item.label}
                   {item.dropdown && (
                     <IoIosArrowDown
-                      className={`text-xl mx-2 transition-transform duration-300 ${
-                        selectedDropdown === index ? "-rotate-180" : ""
-                      }`}
+                      className={`text-xl mx-2 transition-transform duration-300 ${selectedDropdown === index ? "-rotate-180" : ""
+                        }`}
                     />
                   )}
                 </li>
@@ -184,18 +182,16 @@ export default function Layout({ children }) {
           {MenuItems.map((item, index) => (
             <li
               key={index}
-              className={`flex relative px-4 py-2 text-gray-700 font-semibold cursor-pointer hover:text-blue-500 ${
-                location.pathname === item.path ? "text-blue-500" : ""
-              }`}
+              className={`flex relative px-4 py-2 text-gray-700 font-semibold cursor-pointer hover:text-blue-500 ${location.pathname === item.path ? "text-blue-500" : ""
+                }`}
               onMouseEnter={() => setSelectedDropdown(index)}
               onMouseLeave={() => setSelectedDropdown(null)}
               onClick={() => handleMenuItemClick(item, index)}>
               {item.label}
               {item.dropdown && (
                 <IoIosArrowDown
-                  className={`text-sm ml-1 transition-transform duration-300 ${
-                    selectedDropdown === index ? "-rotate-180" : ""
-                  }`}
+                  className={`text-sm ml-1 transition-transform duration-300 ${selectedDropdown === index ? "-rotate-180" : ""
+                    }`}
                 />
               )}
               {item.dropdown && selectedDropdown === index && (

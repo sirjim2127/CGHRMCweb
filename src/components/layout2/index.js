@@ -10,11 +10,11 @@ import { IoIosArrowDown } from 'react-icons/io';
 const MenuItems = [
     { label: "HOME", path: "/" },
     {
-        label: "CGHRMC TR",
+        label: "CHANGE 2028",
         path: "",
         dropdown: [
             {
-                label: "CGHRMC TR",
+                label: "CHANGE 2028",
                 path: "/cghrmc-tr",
             },
             {
@@ -186,11 +186,14 @@ export default function Layout({ children }) {
                                 className="h-16 w-auto sm:h-20"
                             />
                             <div className="ml-4 block">
-                                <h1 className="text-sm font-bold text-gray-700  ">
-                                    Human Resource Management Command
-                                </h1>
                                 <h1 className="text-sm font-bold text-yellow-400">
-                                    Philippine Coast Guard
+                                    PHILIPPINE COAST GUARD
+                                </h1>
+                                <h1 className="text-md font-semibold text-gray-700  ">
+                                    HUMAN RESOURCE MANAGEMENT COMMAND
+                                </h1>
+                                <h1 className="text-xs text-gray-700  ">
+                                    PROFESSIONALISM - INTEGRITY - EXCELLENCE
                                 </h1>
                             </div>
                         </div>
