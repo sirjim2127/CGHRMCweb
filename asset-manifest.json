@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/CGHRMCweb/static/css/main.7ea2d445.css",
-    "main.js": "/CGHRMCweb/static/js/main.604df1b2.js",
+    "main.js": "/CGHRMCweb/static/js/main.4dca6012.js",
     "static/media/Montserrat-VariableFont_wght.ttf": "/CGHRMCweb/static/media/Montserrat-VariableFont_wght.7e687123cd4528224ce5.ttf",
     "index.html": "/CGHRMCweb/index.html",
     "main.7ea2d445.css.map": "/CGHRMCweb/static/css/main.7ea2d445.css.map",
-    "main.604df1b2.js.map": "/CGHRMCweb/static/js/main.604df1b2.js.map"
+    "main.4dca6012.js.map": "/CGHRMCweb/static/js/main.4dca6012.js.map"
   },
   "entrypoints": [
     "static/css/main.7ea2d445.css",
-    "static/js/main.604df1b2.js"
+    "static/js/main.4dca6012.js"
   ]
 }
