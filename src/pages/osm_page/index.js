@@ -5,6 +5,7 @@ import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
 import FillUp from "./components/fillup";
 import GoogleSheetData from "./components/googlesheetdata";
+import Fillup2 from "./components/fillup2";
 
 export default function OSM() {
   const [accessPage, setAccessPage] = useState("signin");
@@ -23,7 +24,7 @@ export default function OSM() {
   if (accessPage === "signin")
     return (
       <div className="w-full h-full mx-auto py-8 px-4">
-        <div className="h-full flex-row md:flex md:space-y-0 space-y-2 space-x-0 md:space-x-2">
+        <div className="h-full mx-auto flex-row md:flex md:space-y-0 space-y-2 space-x-0 md:space-x-2 max-w-2xl">
           <div
             style={{
               boxShadow:
@@ -101,12 +102,13 @@ export default function OSM() {
               </Link>
             </div>
           </div>
-          <div className="flex-1 rounded-md shadow-md">
+          {/* <div className="flex-1 rounded-md shadow-md">
             <FillUp />
-          </div>
+          </div> */}
 
         </div>
-
+        <div className="mt-8"></div>
+        <Fillup2 />
       </div>
     );
 
@@ -126,4 +128,6 @@ export default function OSM() {
 
       </div>
     );
+
+
 }
