@@ -3,11 +3,12 @@ import Textbox from "../../components/textbox/textbox";
 import Button from "../../components/button/button";
 import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
-import FillUp from "./components/fillup";
+// import FillUp from "./components/fillup";
 import GoogleSheetData from "./components/googlesheetdata";
 import Fillup2 from "./components/fillup2";
 
 export default function OSM() {
+  const [activeTab, setActiveTab] = useState("viewList");
   const [accessPage, setAccessPage] = useState("signin");
   const [formData, setFormData] = useState({ email: "", password: "" });
   const handleSubmit = (e) => {
@@ -108,24 +109,41 @@ export default function OSM() {
 
         </div>
         <div className="mt-8"></div>
-        <Fillup2 />
+
       </div>
     );
 
   if (accessPage === "isc")
     return (
-      <div className="w-full h-[100vh]">
-        <GoogleSheetData />
-        {/* <iframe
-          src={`${process.env.PUBLIC_URL}/assets/excel_files/ISC.pdf`}
-          width="100%"
-          height="100%"
-          frameBorder="0"
-          title="Excel Viewer"></iframe> */}
-        <div className="px-4 py-2">
+      <div className="w-full">
+        {/* Tab Buttons */}
+        <div className="flex justify-between items-center space-x-4 p-4 border-b border-gray-300">
+          <div className="flex space-x-4">
+            <button
+              className={`px-4 py-2 ${activeTab === "viewList" ? "border-b-2 border-blue-500 text-blue-500" : ""}`}
+              onClick={() => setActiveTab("viewList")}
+            >
+              View List
+            </button>
+            <button
+              className={`px-4 py-2 ${activeTab === "fillup" ? "border-b-2 border-blue-500 text-blue-500" : ""}`}
+              onClick={() => setActiveTab("fillup")}
+            >
+              Fillup
+            </button>
+          </div>
+          {/* Signout Button */}
           <Button onClick={() => setAccessPage("signin")}>Signout</Button>
         </div>
 
+        {/* Tab Content */}
+        <div className="p-4">
+          {activeTab === "viewList" ? (
+            <GoogleSheetData />
+          ) : (
+            <Fillup2 />
+          )}
+        </div>
       </div>
     );
 
