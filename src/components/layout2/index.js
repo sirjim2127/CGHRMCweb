@@ -71,6 +71,9 @@ export default function Layout({ children }) {
     const location = useLocation();
     const [openIndex, setOpenIndex] = useState(null);
     const [showSideMenu, setShowSideMenu] = useState(false);
+    const [bgOpacity, setBgOpacity] = useState(0.3);
+    const opacityThreshold = 50; // Adjust this value as needed
+
     const handleMouseEnter = (index) => {
         setOpenIndex(index);
     };
@@ -79,24 +82,13 @@ export default function Layout({ children }) {
         setOpenIndex(null);
     };
 
-    const [bgOpacity, setBgOpacity] = useState(0.3);
-    const opacityThreshold = 400; // Adjust this value as needed
-
-    const handleScroll = () => {
-        const scrollTop = window.scrollY;
-        if (scrollTop > opacityThreshold) {
-            setBgOpacity(1);
+    const handleScroll2 = (e) => {
+        if (e.target.scrollTop > opacityThreshold) {
+            setBgOpacity(1); // Full opacity
         } else {
-            setBgOpacity(0.3);
+            setBgOpacity(0.3); // Partial opacity
         }
     };
-
-    useEffect(() => {
-        window.addEventListener('scroll', handleScroll);
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
 
     const isLandingPage = location?.pathname === "/" ? true : false;
 
@@ -118,11 +110,15 @@ export default function Layout({ children }) {
         }
     };
 
+
     return (
-        <div className='h-screen w-screen'>
+        <div className='h-screen w-screen overflow-y-auto' onScroll={handleScroll2}>
             <header
-                className={`h-20 flex p-4  ${isLandingPage ? "fixed" : "sticky"} top-0 z-20 w-full text-gray-100 items-center justify-between transition ease-in-out delay-500`}
-                style={{ backgroundColor: `rgba(37, 99, 235, ${isLandingPage ? bgOpacity : 1})` }}
+                className={`h-20 flex p-4 sticky top-0 z-20 w-full text-gray-100 items-center justify-between transition ease-in-out`}
+                style={{
+                    backgroundColor: `rgba(37, 99, 235, ${isLandingPage ? bgOpacity : 1})`,
+                    transition: 'background-color 0.5s ease-in-out'
+                }}
             >
                 <div className='flex h-full items-center space-x-2 cursor-pointer' onClick={() => navigate("/")}>
                     <img
@@ -239,12 +235,15 @@ export default function Layout({ children }) {
                     </ul>
                 </div>
             </RightSideDrawer>
-            <div className='overflow-y-auto'>
+            <div>
                 {children}
             </div>
-            <footer className="min-h-[20vh] w-full bg-gray-800 flex flex-col">
-                <div className="flex-1"></div>
+            <footer className="min-h-[20vh] w-full bg-gray-800 flex flex-col flex-end">
+                <div className="flex-1">
+
+                </div>
                 <div className="flex p-4 justify-end">
+
                     <FaFacebookSquare
                         className="text-3xl text-gray-200 mx-2 cursor-pointer"
                         onClick={() =>
@@ -264,7 +263,12 @@ export default function Layout({ children }) {
                         }
                     />
                 </div>
+
+
             </footer>
+            <div className="text-center bg-gray-800 text-white text-md py-4">
+                &copy; Philippine Coast Guard Human Resource Management Command {new Date().getFullYear()}
+            </div>
         </div>
     );
 }

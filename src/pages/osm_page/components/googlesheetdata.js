@@ -118,7 +118,7 @@ function GoogleSheetData() {
     }
 
     return (
-        <div className="bg-gray-50 min-h-screen p-4">
+        <div className="bg-gray-50 p-4 overflow-x-auto">
             <input
                 type="text"
                 placeholder="Search by name, email, or date"

@@ -7,14 +7,6 @@
   src: url("../public/assets/fonts/Montserrat-VariableFont_wght.ttf");
 }
 
-header {
-  box-sizing: border-box;
-}
-
-body {
-  overflow-x: hidden;
-}
-
 /* Fade-in animation */
 .fade-in {
   opacity: 0;

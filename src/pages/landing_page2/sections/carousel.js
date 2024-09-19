@@ -4,7 +4,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 export default function LandingCarousel() {
     return (
-        <div className="flex items-center justify-center overflow-hidden relative w-full">
+        <div className="flex items-center justify-center relative w-full -mt-20">
             <Carousel
                 showThumbs={false}
                 infiniteLoop={true}
